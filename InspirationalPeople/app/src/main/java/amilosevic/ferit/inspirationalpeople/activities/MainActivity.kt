@@ -3,6 +3,7 @@ package amilosevic.ferit.inspirationalpeople.activities
 import amilosevic.ferit.inspirationalpeople.R
 import amilosevic.ferit.inspirationalpeople.adapters.InspiringPersonAdapter
 import amilosevic.ferit.inspirationalpeople.data.InspiringPeopleRepository
+import amilosevic.ferit.inspirationalpeople.data.InspiringPersonDatabase
 import amilosevic.ferit.inspirationalpeople.databinding.ActivityMainBinding
 import amilosevic.ferit.inspirationalpeople.interfaces.OnInspiringPersonImageSelectedListener
 import amilosevic.ferit.inspirationalpeople.model.InspiringPerson
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity(), OnInspiringPersonImageSelectedListener
 
     private lateinit var mainBinding: ActivityMainBinding
     private lateinit var onInspiringPersonImageSelectedListener: OnInspiringPersonImageSelectedListener
+
+    val inspiringPersonDao = InspiringPersonDatabase.getInstance().inspiringPeopleDao()
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
