@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+    
+    <ImageView
+        android:id="@+id/iv_inspirationalPeopleItem_image"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <TextView
+        android:id="@+id/tv_inspirationalPeople_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_inspirationalPeopleItem_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_inspirationalPeopleItem_image"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textSize="@dimen/textSize_inspirationalPeople_title"
+        tools:text="@tools:sample/lorem"/>
+
+    <TextView
+        android:id="@+id/tv_inspirationalPeople_dateOfBirth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_inspirationalPeople_title"
+        app:layout_constraintStart_toEndOf="@id/iv_inspirationalPeopleItem_image"
+        app:layout_constraintEnd_toEndOf="@id/tv_inspirationalPeople_title"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textSize="@dimen/textSize_inspirationalPeople_dateOfBirth"
+        android:maxLines="1"
+        tools:text="@tools:sample/lorem/random"/>
+
+    <TextView
+        android:id="@+id/tv_inspirationalPeople_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_inspirationalPeople_dateOfBirth"
+        app:layout_constraintStart_toEndOf="@id/iv_inspirationalPeopleItem_image"
+        app:layout_constraintBottom_toBottomOf="@id/iv_inspirationalPeopleItem_image"
+        app:layout_constraintEnd_toEndOf="@id/tv_inspirationalPeople_dateOfBirth"
+        android:maxLines="3"
+        android:layout_marginStart="@dimen/margin_small"/>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
